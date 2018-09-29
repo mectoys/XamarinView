@@ -12,7 +12,43 @@
     <StackLayout 
         HorizontalOptions="Center"
         VerticalOptions="Center">
-
+        <BoxView
+            BackgroundColor="Black"
+            HeightRequest="100">
+            
+        </BoxView>
+        <Label
+            Margin="25,30,0,0"
+            Text="Red">
+           
+        </Label>
+        <Slider
+            x:Name="redSlider"
+            Margin="15,0,0,0"
+            ValueChanged="redSlider_ValueChanged">
+            
+        </Slider>
+        <Label
+            Margin="25,30,0,0"
+            Text="Green"></Label>
+        <Slider
+            Margin="15"
+            ValueChanged="redSlider_ValueChanged"
+            x:Name="greeSlider">            
+        </Slider>
+        <Label
+            Margin="25,30,0,0"
+            Text="Blue">            
+        </Label>
+        <Slider
+            Margin="15,0,0,0"
+            x:Name="blueSlider"
+            ValueChanged="redSlider_ValueChanged">
+            
+        </Slider>
+        <Label
+            Text="Valor Hexadecimal "
+            x:Name="lblDisplay"></Label>
         <Button 
                 BackgroundColor="Red"
                 BorderColor="Blue"
@@ -29,14 +65,35 @@
                 x:Name="editor"    
                 FontAttributes="Bold"
                 FontSize="Large"
-                HeightRequest="500"
+                HeightRequest="50"
                 Text="xxxxx"
-            TextColor="Blue"
-            >
+                TextColor="Blue">
             
         </Editor>
-        
+        <DatePicker
+           
+            Format="dd/MM/yyyy"
+             x:Name="dtp"
+        ></DatePicker>
+        <Image
+            Source="pdfelectronico2"
+            Aspect="AspectFit">
+            
+        </Image>
+        <Entry
+            FontAttributes="Bold"
+            FontSize="Medium"
+            HorizontalOptions="FillAndExpand"
+            IsPassword="True"
+            Placeholder="Escribe"
+            PlaceholderColor="Yellow"
+            Text="Texto Default"
+            TextColor="Yellow"
+            VerticalOptions="Center"
+            Completed="Entry_Completed">
+            
+        </Entry>
     </StackLayout>
-    
+
     
 </ContentPage>
