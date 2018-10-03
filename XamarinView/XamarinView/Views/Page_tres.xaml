@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinView.Views.Page_tres">
+    <ContentPage.Content>
+        <StackLayout>
+            <Slider
+                Maximum="200"
+                Minimum="100"
+                Value="50"
+                x:Name="slider"
+                ValueChanged="slider_ValueChanged"
+                ></Slider>
+            <Label
+                x:Name="lblDisplay"></Label>
+           
+            <ProgressBar 
+                Progress=".5"
+                x:Name="progress"
+                         >
+                
+            </ProgressBar>
+            <Button 
+                Clicked="btnSimulate_Clicked"
+                Text="Simular"
+                x:Name="btnSimulate"></Button>
+            
+            <Switch IsToggled="True"
+                    Toggled="Switch_Toggled"></Switch>
+            
+            <TimePicker 
+                TextColor="Yellow"
+                x:Name="picker"></TimePicker>
+        </StackLayout>
+      
+    </ContentPage.Content>
+    
+    <WebView 
+            Navigated="webView_Navigated"
+            Navigating="webView_Navigating"
+            Source="https://www.tecnicor.com.pe"
+            x:Name="webView"
+            ></WebView>
+</ContentPage>

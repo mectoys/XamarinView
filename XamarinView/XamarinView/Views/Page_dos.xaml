@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinView.Views.Page_dos">
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+       
+        <Label
+                BackgroundColor="Blue"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="End"
+                LineBreakMode="TailTruncation"
+                Text="Welcome to Xamarin.Forms!"
+                TextColor="Yellow"
+                VerticalOptions="Center" 
+                VerticalTextAlignment="End"
+                XAlign="Start"
+                YAlign="End"
+                WidthRequest="100">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            Text="Horarios"                          >
+                            
+                        </Span>
+                        <Span
+                            ForegroundColor="Red"
+                            Text="Lunes a Viernes 8-12 pm"
+                            >
+                            
+                        </Span>  
+                    </FormattedString>
+                </Label.FormattedText>
+               
+            </Label>
+        <Stepper
+            x:Name="stepper"
+           Minimum="50"
+            Maximum="150"
+            Increment="25"
+            ValueChanged="stepper_ValueChanged">
+                        
+        </Stepper>
+        <Label  x:Name="lblDisplay"></Label>
+        <Picker
+            Title="Selecciona un ítem:"
+            TextColor="Yellow"
+            SelectedIndexChanged="picker_SelectedIndexChanged"
+            x:Name="picker">
+            <Picker.Items>
+                <x:String>Halo</x:String>
+                <x:String>Gears of War</x:String>
+                <x:String>Final Fantasy</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <TableView Intent="Form">
+            <TableRoot Title="Test">
+                <TableSection Title="Datos Generales">
+                    <TextCell Text="Nombre"
+                              Detail="Solo mayores de 18 años">
+                        
+                    </TextCell>
+                    <EntryCell Placeholder="Su nombre"></EntryCell>
+                </TableSection>
+
+                <TableSection Title="Datos Particulares">
+                    <EntryCell Placeholder="044-293959"
+                               Label="Celular"
+                               Keyboard="Telephone">
+                        
+                    </EntryCell>
+                    <SwitchCell Text="Suscribirse"></SwitchCell>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <BoxView Color="Red"></BoxView>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="test1"></Label>
+                                    <Label Text="test2"></Label>
+                                </StackLayout>
+                                <BoxView Color="Blue"></BoxView>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </TableSection>
+
+            </TableRoot>
+            
+        </TableView>
+        
+    </StackLayout>
+</ContentPage>

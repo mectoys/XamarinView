@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinView.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamarinView
@@ -11,7 +12,8 @@ namespace XamarinView
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Page_tres();
+                // new MainPage();
         }
 
         protected override void OnStart()
